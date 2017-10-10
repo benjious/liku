@@ -40,6 +40,7 @@ public class LogLet extends HttpServlet {
             out.close();
         } else {
             System.out.println("Failed");
+            //System.out.println("");
         }
 
 
