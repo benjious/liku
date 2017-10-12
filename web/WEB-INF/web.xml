@@ -23,5 +23,17 @@
         <url-pattern>/ReLet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>JsonServlet</servlet-name>
+        <servlet-class>com.servlet.JsonServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>JsonServlet</servlet-name>
+        <url-pattern>/getJson</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
 
 </web-app>

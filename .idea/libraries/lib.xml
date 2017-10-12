@@ -5,6 +5,9 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES />
+    <excluded>
+      <root url="jar://$PROJECT_DIR$/../liku/web/WEB-INF/lib/gson-2.2.4.jar!/" />
+    </excluded>
     <jarDirectory url="file://$PROJECT_DIR$/../liku/web/WEB-INF/lib" recursive="false" />
   </library>
 </component>

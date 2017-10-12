@@ -16,6 +16,7 @@ public class LogLet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
+        request.setCharacterEncoding("UTF-8");
         username = charSetConvert(username);
         String password = request.getParameter("password");
         System.out.println(username + "-----" + password);
@@ -57,7 +58,7 @@ public class LogLet extends HttpServlet {
         System.out.println("传过来的编码是   ： " + charSet);
         try {
             byte[] b = request.getBytes(charSet);
-            request = new String(b, "UTF-8");
+            request = new String(b, charSet);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -66,12 +67,11 @@ public class LogLet extends HttpServlet {
     }
 
     public static String geteEncoding(String str) {
-        String[] charSet = {"GBK", "GB2312", "UTF-8", "ISO-8859-1"};
+        String[] charSet = {"UTF-8","GBK", "GB2312", "ISO-8859-1"};
         try {
             for (int i = 0; i < charSet.length; i++) {
                 if (str.equals(new String(str.getBytes(charSet[i]), charSet[i]))) {
-                    String s1 = charSet[i];
-                    return s1;
+                    return charSet[i];
 
                 }
             }
