@@ -1,7 +1,7 @@
 package com.servlet;
 
 import com.google.gson.Gson;
-import com.model.User;
+import com.model.UserAll;
 import com.sqlService.SqlOperator;
 
 import java.io.IOException;
@@ -26,45 +26,13 @@ public class LogLet extends HttpServlet {
 
         //新建服务对象
         SqlOperator sqlOperator = new SqlOperator();
-
-
-        //验证处理
-//        boolean isLogin = sqlOperator.login(username, password);
-//        System.out.println("验证处理的结果是：    " + isLogin);
-//        if (isLogin) {
-//            System.out.println("Success");
-//            request.getSession().setAttribute("username", username);
-//            response.setCharacterEncoding("UTF-8");
-//            response.setContentType("text/html");
-//            System.out.println("");
-//            PrintWriter out = response.getWriter();
-//            out.print(username);
-//            out.flush();
-//            out.close();
-//        } else {
-//            System.out.println("Failed");
-//            //System.out.println("");
-//        }
-
-        User havaCount = sqlOperator.login_name(username, password);
+        UserAll havaCount = sqlOperator.login_name(username, password);
 
         Gson gson = new Gson();
         String json = gson.toJson(havaCount);
 
-        //System.out.println("验证处理的结果是：    " + havaCount.toString());
         if (havaCount!=null) {
-
             System.out.println("Success");
-//            request.getSession().setAttribute("username", username);
-//            response.setCharacterEncoding("UTF-8");
-//            response.setContentType("text/html");
-//            System.out.println("");
-//            PrintWriter out = response.getWriter();
-//            out.print(username);
-//            out.flush();
-//            out.close();
-
-
             System.out.println(json);
             response.setContentType("text/plain");
             response.setCharacterEncoding("gb2312");
