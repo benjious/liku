@@ -71,7 +71,6 @@ public class LogLet extends HttpServlet {
             for (int i = 0; i < charSet.length; i++) {
                 if (str.equals(new String(str.getBytes(charSet[i]), charSet[i]))) {
                     return charSet[i];
-
                 }
             }
 

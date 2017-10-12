@@ -10,10 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d656d943-eb4f-428f-9d71-677442554805" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../liku/src/com/model/UserAll.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../liku/web/WEB-INF/classes/com/servlet/LogLet.class" afterPath="$PROJECT_DIR$/../liku/web/WEB-INF/classes/com/servlet/LogLet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../liku/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../liku/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../liku/src/com/servlet/LogLet.java" afterPath="$PROJECT_DIR$/../liku/src/com/servlet/LogLet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../liku/src/com/sqlService/SqlOperator.java" afterPath="$PROJECT_DIR$/../liku/src/com/sqlService/SqlOperator.java" />
     </list>
     <ignored path="$PROJECT_DIR$/../liku/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,8 +51,8 @@
       <file leaf-file-name="LogLet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/LogLet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+            <state relative-caret-position="64">
+              <caret line="63" column="23" lean-forward="true" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -511,7 +510,7 @@
       <workItem from="1507510224651" duration="17642000" />
       <workItem from="1507615396113" duration="6598000" />
       <workItem from="1507766598017" duration="5309000" />
-      <workItem from="1507772482739" duration="4276000" />
+      <workItem from="1507772482739" duration="5529000" />
     </task>
     <task id="LOCAL-00001" summary="没有使用okhttp  和 JSON 之前">
       <created>1507621943234</created>
@@ -562,11 +561,18 @@
       <option name="project" value="LOCAL" />
       <updated>1507772648148</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="完成了JSON_USER的测试">
+      <created>1507778961847</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1507778961847</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52445000" />
+    <option name="totallyTimeSpent" value="53698000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -624,7 +630,8 @@
     <MESSAGE value="试一试" />
     <MESSAGE value="保存" />
     <MESSAGE value="正常" />
-    <option name="LAST_COMMIT_MESSAGE" value="正常" />
+    <MESSAGE value="完成了JSON_USER的测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成了JSON_USER的测试" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1080,8 +1087,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/LogLet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+        <state relative-caret-position="64">
+          <caret line="63" column="23" lean-forward="true" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
