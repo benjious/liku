@@ -1,6 +1,7 @@
 package com.servlet;
 
 import com.google.gson.Gson;
+import com.model.User;
 import com.model.UserAll;
 import com.sqlService.SqlOperator;
 
