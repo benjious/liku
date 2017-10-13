@@ -75,6 +75,7 @@ public class JsonServlet extends HttpServlet{
 
 // 调用GSON jar工具包封装好的toJson方法，可直接生成JSON字符串
         Gson gson = new Gson();
+
         String json = gson.toJson(nt);
 
 // 输出到界面

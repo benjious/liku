@@ -10,9 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d656d943-eb4f-428f-9d71-677442554805" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../liku/web/WEB-INF/classes/com/servlet/LogLet.class" afterPath="$PROJECT_DIR$/../liku/web/WEB-INF/classes/com/servlet/LogLet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../liku/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../liku/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../liku/src/com/servlet/LogLet.java" afterPath="$PROJECT_DIR$/../liku/src/com/servlet/LogLet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../liku/src/com/servlet/JsonServlet.java" afterPath="$PROJECT_DIR$/../liku/src/com/servlet/JsonServlet.java" />
     </list>
     <ignored path="$PROJECT_DIR$/../liku/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,96 +37,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../liku/web/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LogLet.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/LogLet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="32" column="45" lean-forward="true" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="News.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../liku/src/com/News.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JsonServlet.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="JsonServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/JsonServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="79" column="8" lean-forward="false" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
+            <state relative-caret-position="408">
+              <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewTotal.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../liku/src/com/NewTotal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SqlOperator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../liku/src/com/sqlService/SqlOperator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-544">
-              <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResultSetImpl.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../liku/web/WEB-INF/lib/mysql-connector-java-5.1.44-bin.jar!/com/mysql/jdbc/ResultSetImpl.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="59344">
-              <caret line="3755" column="0" lean-forward="false" selection-start-line="3755" selection-start-column="0" selection-end-line="3755" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../liku/src/com/db/DBManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1136">
-              <caret line="75" column="35" lean-forward="false" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../liku/web/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="22" column="15" lean-forward="false" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -173,14 +90,14 @@
         <option value="$PROJECT_DIR$/../liku/src/com/sqlService/Service.java" />
         <option value="$PROJECT_DIR$/../liku/src/com/News.java" />
         <option value="$PROJECT_DIR$/../liku/src/com/NewTotal.java" />
-        <option value="$PROJECT_DIR$/../liku/src/com/servlet/JsonServlet.java" />
         <option value="$PROJECT_DIR$/../liku/src/com/servlet/LogTest.java" />
         <option value="$PROJECT_DIR$/../liku/src/com/model/User.java" />
         <option value="$PROJECT_DIR$/../liku/web/index.jsp" />
         <option value="$PROJECT_DIR$/../liku/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/../liku/src/com/model/UserAll.java" />
-        <option value="$PROJECT_DIR$/../liku/src/com/sqlService/SqlOperator.java" />
         <option value="$PROJECT_DIR$/../liku/src/com/servlet/LogLet.java" />
+        <option value="$PROJECT_DIR$/../liku/src/com/sqlService/SqlOperator.java" />
+        <option value="$PROJECT_DIR$/../liku/src/com/servlet/JsonServlet.java" />
       </list>
     </option>
   </component>
@@ -240,13 +157,6 @@
               <item name="liku" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liku" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="liku" type="b2602c69:ProjectViewProjectNode" />
@@ -478,7 +388,7 @@
       <workItem from="1507615396113" duration="6598000" />
       <workItem from="1507766598017" duration="5309000" />
       <workItem from="1507772482739" duration="6794000" />
-      <workItem from="1507864309920" duration="4615000" />
+      <workItem from="1507864309920" duration="7353000" />
     </task>
     <task id="LOCAL-00001" summary="没有使用okhttp  和 JSON 之前">
       <created>1507621943234</created>
@@ -585,11 +495,25 @@
       <option name="project" value="LOCAL" />
       <updated>1507875421237</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="保存">
+      <created>1507875681194</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1507875681194</updated>
+    </task>
+    <task id="LOCAL-00017" summary="保存">
+      <created>1507876272730</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1507876272730</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59578000" />
+    <option name="totallyTimeSpent" value="62316000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -615,7 +539,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32820514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18664384" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1021,10 +945,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/JsonServlet.java">
+    <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/LogLet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="79" column="8" lean-forward="false" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
+        <state relative-caret-position="39">
+          <caret line="32" column="22" lean-forward="false" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1033,16 +957,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../liku/src/com/sqlService/SqlOperator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-544">
-          <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+        <state relative-caret-position="376">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/LogLet.java">
+    <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/JsonServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="32" column="45" lean-forward="true" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+        <state relative-caret-position="408">
+          <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
