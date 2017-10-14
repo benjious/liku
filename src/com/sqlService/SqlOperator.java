@@ -2,17 +2,17 @@ package com.sqlService;
 
 import com.db.DBManager;
 import com.model.User;
-import com.model.UserAll;
+import com.model.UsersALL;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  *
  */
 public class SqlOperator {
+    public static final String NOTHING ="NOTHING";
     public Boolean login(String username, String password) {
 
         //获取sql查询语句
@@ -37,9 +37,9 @@ public class SqlOperator {
         return false;
     }
 
-    public UserAll login_name(String username, String password) {
+    public UsersALL login_name(String username, String password) {
 
-        UserAll userAll;
+        UsersALL usersALL;
         ArrayList<User> users = new ArrayList<>();
 
         //获取sql查询语句
@@ -57,8 +57,8 @@ public class SqlOperator {
                 System.out.println("数据库的结果是：" + name + " ");
                 users.add(new User(name, null));
             }
-            userAll = new UserAll(users, users.size());
-            return userAll;
+            usersALL = new UsersALL(users, users.size(),NOTHING);
+            return usersALL;
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("这里出错？");

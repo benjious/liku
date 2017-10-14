@@ -1,8 +1,7 @@
 package com.servlet;
 
 import com.google.gson.Gson;
-import com.model.User;
-import com.model.UserAll;
+import com.model.UsersALL;
 import com.sqlService.SqlOperator;
 
 import java.io.IOException;
@@ -27,8 +26,8 @@ public class LogLet extends HttpServlet {
 
         //新建服务对象
         SqlOperator sqlOperator = new SqlOperator();
-        UserAll havaCount = sqlOperator.login_name(username, password);
-
+        UsersALL havaCount = sqlOperator.login_name(username, password);
+        System.out.println("havaCount :"+havaCount.toString());
         Gson gson = new Gson();
         String json = gson.toJson(havaCount);
 
