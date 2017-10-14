@@ -57,8 +57,11 @@ public class SqlOperator {
                 System.out.println("数据库的结果是：" + name + " ");
                 users.add(new User(name, null));
             }
-            usersALL = new UsersALL(users, users.size(),NOTHING,false);
+//            usersALL = new UsersALL(users, users.size(),NOTHING,false);
+            usersALL = new UsersALL();
+            usersALL.setUsers(users);
             return usersALL;
+
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("这里出错？");

@@ -5,7 +5,7 @@ import java.util.List;
 public class UsersALL {
     private List<User> Users;
     private int number;
-    private String data;
+    private String data=new String("");
 
     public boolean isYesNo() {
         return isYesNo;
@@ -22,6 +22,9 @@ public class UsersALL {
         this.number = number;
         this.data = data;
         this.isYesNo = isYesNo;
+    }
+
+    public UsersALL() {
     }
 
     public List<User> getUsers() {

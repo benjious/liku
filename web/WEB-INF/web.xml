@@ -32,6 +32,25 @@
         <url-pattern>/getJson</url-pattern>
     </servlet-mapping>
 
+
+    <servlet>
+        <servlet-name>CheckPallet</servlet-name>
+        <servlet-class>com.servlet.CheckPallet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheckPallet</servlet-name>
+        <url-pattern>/CheckPallet</url-pattern>
+    </servlet-mapping>
+
+
+
+
+
+
+
+
+
+
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>

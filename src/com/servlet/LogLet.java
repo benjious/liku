@@ -30,7 +30,6 @@ public class LogLet extends HttpServlet {
         System.out.println("havaCount :"+havaCount.toString());
         Gson gson = new Gson();
         String json = gson.toJson(havaCount);
-
         if (havaCount!=null) {
             System.out.println("Success");
             System.out.println(json);
