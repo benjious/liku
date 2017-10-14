@@ -7,10 +7,21 @@ public class UsersALL {
     private int number;
     private String data;
 
-    public UsersALL(List<User> users, int number, String data) {
+    public boolean isYesNo() {
+        return isYesNo;
+    }
+
+    public void setYesNo(boolean yesNo) {
+        isYesNo = yesNo;
+    }
+
+    private boolean isYesNo;
+
+    public UsersALL(List<User> users, int number, String data, boolean isYesNo) {
         Users = users;
         this.number = number;
         this.data = data;
+        this.isYesNo = isYesNo;
     }
 
     public List<User> getUsers() {

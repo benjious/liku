@@ -57,7 +57,7 @@ public class SqlOperator {
                 System.out.println("数据库的结果是：" + name + " ");
                 users.add(new User(name, null));
             }
-            usersALL = new UsersALL(users, users.size(),NOTHING);
+            usersALL = new UsersALL(users, users.size(),NOTHING,false);
             return usersALL;
         } catch (Exception e) {
             e.printStackTrace();
