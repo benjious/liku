@@ -2,6 +2,7 @@ package com.model;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
@@ -21,8 +22,8 @@ public class UsersALL {
 
     private boolean isYesNo;
 
-    public UsersALL(List<User> users, int number, String data, boolean isYesNo) {
-        Users = users;
+    public UsersALL( int number, String data, boolean isYesNo) {
+       // Users = new ArrayList<>();
         this.number = number;
         this.data = data;
         this.isYesNo = isYesNo;
@@ -58,8 +59,7 @@ public class UsersALL {
     @Override
     public String toString() {
         return "UsersALL{" +
-                "Users=" + Users +
-                '}';
+                "Users=" + Users +'}';
     }
 
     public static void makeJson(HttpServletResponse response, UsersALL havaCount, String json) throws IOException {

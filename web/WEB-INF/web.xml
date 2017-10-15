@@ -42,10 +42,23 @@
         <url-pattern>/CheckPallet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>CheckPort</servlet-name>
+        <servlet-class>com.servlet.CheckPort</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheckPort</servlet-name>
+        <url-pattern>/CheckPort</url-pattern>
+    </servlet-mapping>
 
-
-
-
+    <servlet>
+        <servlet-name>GetNewStackId</servlet-name>
+        <servlet-class>com.servlet.GetNewStackId</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetNewStackId</servlet-name>
+        <url-pattern>/GetNewStackId</url-pattern>
+    </servlet-mapping>
 
 
 

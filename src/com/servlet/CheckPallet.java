@@ -15,7 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 public class CheckPallet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        super.doGet(request, response);
         String pallet_id = request.getParameter("pallet_id");
         request.setCharacterEncoding("UTF-8");
         int status =Integer.decode(request.getParameter("status"));
