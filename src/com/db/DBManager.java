@@ -9,10 +9,15 @@ import java.sql.Statement;
 public class DBManager {
 
     //数据库连接常量
-    public static final String DRIVER = "com.mysql.jdbc.Driver";
-    public static final String USER = "root";
+//    public static final String DRIVER = "com.mysql.jdbc.Driver";
+//    public static final String USER = "root";
+//    public static final String PASS = "12345678";
+//    public static final String MYSQL_URL = "jdbc:mysql://localhost:3306/liti";
+
+    public static final String DRIVER = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+    public static final String USER = "sa";
     public static final String PASS = "12345678";
-    public static final String URL = "jdbc:mysql://localhost:3306/liti";
+    public static final String MYSQL_URL = "jdbc:sqlserver://localhost:1433;DatabaseName=ASRS";
 
     //静态成员，支持单态模式
     private static DBManager per = null;
@@ -47,7 +52,7 @@ public class DBManager {
         System.out.println("Connecting ot database........");
         try {
 
-            mConnection = DriverManager.getConnection(URL, USER, PASS);
+            mConnection = DriverManager.getConnection(MYSQL_URL, USER, PASS);
             mStatement = mConnection.createStatement();
         } catch (SQLException e) {
             e.printStackTrace();

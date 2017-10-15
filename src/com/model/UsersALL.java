@@ -1,6 +1,10 @@
 package com.model;
 
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
+
+import javax.servlet.http.HttpServletResponse;
 
 public class UsersALL {
     private List<User> Users;
@@ -56,5 +60,19 @@ public class UsersALL {
         return "UsersALL{" +
                 "Users=" + Users +
                 '}';
+    }
+
+    public static void makeJson(HttpServletResponse response, UsersALL havaCount, String json) throws IOException {
+        if (havaCount!=null) {
+            System.out.println("Success");
+            System.out.println(json);
+            response.setContentType("text/plain");
+            response.setCharacterEncoding("gb2312");
+            PrintWriter out = new PrintWriter(response.getOutputStream());
+            out.print(json);
+            out.flush();
+        } else {
+            System.out.println("Failed");
+        }
     }
 }

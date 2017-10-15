@@ -1,6 +1,6 @@
 package com.model;
 
-public class User {
+public class  User {
     private String username;
     private String password;
 

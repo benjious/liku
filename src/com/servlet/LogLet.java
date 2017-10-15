@@ -19,7 +19,7 @@ public class LogLet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         request.setCharacterEncoding("UTF-8");
-        username = charSetConvert(username);
+       // username = charSetConvert(username);
         String password = request.getParameter("password");
         System.out.println(username + "-----" + password);
 
@@ -30,19 +30,7 @@ public class LogLet extends HttpServlet {
         System.out.println("havaCount :"+havaCount.toString());
         Gson gson = new Gson();
         String json = gson.toJson(havaCount);
-        if (havaCount!=null) {
-            System.out.println("Success");
-            System.out.println(json);
-            response.setContentType("text/plain");
-            response.setCharacterEncoding("gb2312");
-            PrintWriter out = new PrintWriter(response.getOutputStream());
-            out.print(json);
-            out.flush();
-        } else {
-            System.out.println("Failed");
-        }
-
-
+        UsersALL.makeJson(response, havaCount, json);
     }
 
     @Override

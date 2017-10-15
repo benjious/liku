@@ -71,5 +71,41 @@ public class SqlOperator {
         return null;
     }
 
+    //返回int
+    public  UsersALL CheckPallet(String pallet_id, int status)
+    //status 为0时,查找组盘入库表白WMS_STACKING 里状态为0或者为1且托盘编号为pallet_id的任务是否存在
+    //status不为0时则查找托盘号为pallet_id的托盘是否存在托盘表WMS_BA_PALLET_MAPPING 中
+    {
+        int signal;
+        String commandString;
+        UsersALL usersALL;
+
+        if (status == 0)
+            commandString = "select * from WMS_STACKING where PALLET_ID = '" + pallet_id + "'and STATUS = 0 or PALLET_ID = '" + pallet_id + "'and STATUS = 1";
+        else
+            commandString = "select * from WMS_BA_PALLET_MAPPING where PALLET_ID = '" + pallet_id + "'";
+
+        System.out.println("  xyz 登录的语句为：" + commandString);
+        //初始化连接数据库对象
+        DBManager manager = DBManager.createInstance();
+        manager.connectDB();
+        //使用对象进行查询
+        try {
+            ResultSet rs = manager.executeQuery(commandString);
+            if (rs!=null && rs.getRow()!=0) {
+                signal =1;
+            }else {
+                signal=-1;
+            }
+            usersALL = new UsersALL(null, signal, null, false);
+            return usersALL;
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("这里出错？");
+        }
+        manager.closeDB();
+        return null;
+    }
+
 
 }
