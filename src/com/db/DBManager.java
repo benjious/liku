@@ -60,6 +60,22 @@ public class DBManager {
         System.out.println("SqlManager: Connect to database successful.");
     }
 
+    //连接数据库，获取句柄和对象
+    public void connectDB_cursor_sroll() {
+        System.out.println("Connecting ot database........");
+        try {
+
+            mConnection = DriverManager.getConnection(MYSQL_URL, USER, PASS);
+            mStatement = mConnection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        System.out.println("SqlManager: Connect to database successful.");
+    }
+
+
+
+
     //关闭数据库，关闭对象，释放句柄
     public void closeDB() {
         System.out.println("Close connection to database....");

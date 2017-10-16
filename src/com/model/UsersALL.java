@@ -30,6 +30,7 @@ public class UsersALL {
     }
 
     public UsersALL() {
+        Users=new ArrayList<>();
     }
 
     public List<User> getUsers() {

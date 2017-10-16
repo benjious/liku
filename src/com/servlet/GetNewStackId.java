@@ -1,5 +1,7 @@
 package com.servlet;
 
+import com.google.gson.Gson;
+import com.model.UsersALL;
 import com.sqlService.SqlOperator;
 
 import java.io.IOException;
@@ -18,10 +20,10 @@ public class GetNewStackId extends HttpServlet {
 
         //新建服务对象
         SqlOperator sqlOperator = new SqlOperator();
-//        UsersALL havaCount = sqlOperator.CheckPallet(pallet_id,status);
-//        System.out.println("havaCount :"+havaCount.toString());
-//        Gson gson = new Gson();
-//        String json = gson.toJson(havaCount);
-//        UsersALL.makeJson(response, havaCount, json);
+        UsersALL havaCount = sqlOperator.GetNewStack_id(strKind);
+        System.out.println("havaCount :"+havaCount.toString());
+        Gson gson = new Gson();
+        String json = gson.toJson(havaCount);
+        UsersALL.makeJson(response, havaCount, json);
     }
 }
