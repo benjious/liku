@@ -9,29 +9,33 @@ import javax.servlet.http.HttpServletResponse;
 
 public class UsersALL {
     private List<User> Users;
+    private List<StockDetail> mStockDetails;
     private int number;
-    private String data=new String("");
+    private String data = new String("");
+    private boolean yesNo;
+
+
+    public UsersALL() {
+        Users = new ArrayList<>();
+        mStockDetails = new ArrayList<>();
+    }
+
+    public List<StockDetail> getStockDetails() {
+        return mStockDetails;
+    }
+
+    public void setStockDetails(List<StockDetail> stockDetails) {
+        mStockDetails = stockDetails;
+    }
 
     public boolean isYesNo() {
-        return isYesNo;
+        return yesNo;
     }
 
     public void setYesNo(boolean yesNo) {
-        isYesNo = yesNo;
+        this.yesNo = yesNo;
     }
 
-    private boolean isYesNo;
-
-    public UsersALL( int number, String data, boolean isYesNo) {
-       // Users = new ArrayList<>();
-        this.number = number;
-        this.data = data;
-        this.isYesNo = isYesNo;
-    }
-
-    public UsersALL() {
-        Users=new ArrayList<>();
-    }
 
     public List<User> getUsers() {
         return Users;
@@ -60,11 +64,11 @@ public class UsersALL {
     @Override
     public String toString() {
         return "UsersALL{" +
-                "Users=" + Users +'}';
+                "Users=" + Users + '}';
     }
 
     public static void makeJson(HttpServletResponse response, UsersALL havaCount, String json) throws IOException {
-        if (havaCount!=null) {
+        if (havaCount != null) {
             System.out.println("Success");
             System.out.println(json);
             response.setContentType("text/plain");

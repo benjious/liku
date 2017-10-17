@@ -1,6 +1,7 @@
 package com.sqlService;
 
 import com.db.DBManager;
+import com.model.StockDetail;
 import com.model.User;
 import com.model.UsersALL;
 
@@ -9,6 +10,7 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  *
@@ -78,7 +80,7 @@ public class SqlOperator {
     //status不为0时则查找托盘号为pallet_id的托盘是否存在托盘表WMS_BA_PALLET_MAPPING 中
     {
         int signal;
-        int count=0;
+        int count = 0;
         String commandString;
         UsersALL usersALL;
 
@@ -97,10 +99,10 @@ public class SqlOperator {
             while (rs.next()) {
                 count = count + 1;
             }
-            if (count!=0) {
+            if (count != 0) {
                 signal = 1;
             } else {
-                signal = -1;
+                signal = 0;
             }
             usersALL = new UsersALL();
             usersALL.setNumber(signal);
@@ -119,7 +121,7 @@ public class SqlOperator {
     //status 为0时,查找组盘入库表白WMS_STACKING 里状态为0或者为1且托盘编号为pallet_id的任务是否存在
     //status不为0时则查找托盘号为pallet_id的托盘是否存在托盘表WMS_BA_PALLET_MAPPING 中
     {
-        int count=0;
+        int count = 0;
         boolean signal;
         UsersALL usersALL;
         String commandString = "select * from WMS_BA_PORTS where P_CODE = '" + p_code + "'";
@@ -184,6 +186,47 @@ public class SqlOperator {
             }
             UsersALL usersALL = new UsersALL();
             usersALL.setData(stack_id);
+            System.out.println("是不是执行到这里");
+            return usersALL;
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("这里出错？");
+        }
+        manager.closeDB();
+        return null;
+
+
+    }
+
+    public UsersALL GetStockDetail(int stock_oid) {
+        List<StockDetail> stockDetails = new ArrayList<>();
+        String commString = "select * from WMS_STOCK_DETAIL where STOCK_OID = '" + stock_oid + "'";
+        System.out.println("查询语句为： "+commString);
+        //初始化连接数据库对象
+        DBManager manager = DBManager.createInstance();
+        manager.connectDB_cursor_sroll();
+        //使用对象进行查询
+
+        int count = 0;
+        try {
+            ResultSet rs = manager.executeQuery(commString);
+            while (rs.next()) {
+                count = count + 1;
+            }
+            if (count != 0) {
+                for (int i = 1; i <= count; i++) {
+                    rs.absolute(i);
+                    StockDetail sd = new StockDetail();
+                    sd.set_oID(Integer.decode(rs.getString("OID")));
+                    sd.set_sTOCK_OID(Integer.decode(rs.getString("STOCK_OID")));
+                    sd.set_iTEM_ID(rs.getString("ITEM_ID"));
+                    sd.set_oUT_QTY(rs.getDouble("OUT_QTY"));
+                    stockDetails.add(sd);
+                }
+            }
+
+            UsersALL usersALL = new UsersALL();
+            usersALL.setStockDetails(stockDetails);
             System.out.println("是不是执行到这里");
             return usersALL;
         } catch (Exception e) {
