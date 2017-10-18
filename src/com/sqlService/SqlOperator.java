@@ -13,7 +13,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- *
+ *  游标查询是从第一行开始的，
  */
 public class SqlOperator {
     public static final String NOTHING = "NOTHING";
@@ -151,6 +151,47 @@ public class SqlOperator {
         return null;
     }
 
+    //返回int
+    public UsersALL Check_Pro_No(String pro_no)
+    //status 为0时,查找组盘入库表白WMS_STACKING 里状态为0或者为1且托盘编号为pallet_id的任务是否存在
+    //status不为0时则查找托盘号为pallet_id的托盘是否存在托盘表WMS_BA_PALLET_MAPPING 中
+    {
+        int count = 0;
+        String  str_name="";
+        UsersALL usersALL;
+        String commandString ="select PRODUCT_NAME from WMS_BA_PRODUCT where PRODUCT_ID= '" + pro_no + "'";
+        System.out.println("  xyz 登录的语句为：" + commandString);
+        //初始化连接数据库对象
+        DBManager manager = DBManager.createInstance();
+        manager.connectDB_cursor_sroll();
+
+        //使用对象进行查询
+        try {
+            ResultSet rs = manager.executeQuery(commandString);
+            while (rs.next()) {
+                count = count + 1;
+                System.out.println("count : "+count);
+            }
+            if (count!=0) {
+                for (int i = 1; i <=count; i++) {
+                    rs.absolute(i);
+                    str_name=rs.getString("PRODUCT_NAME");
+                }
+            }
+            usersALL = new UsersALL();
+            usersALL.setData(str_name);
+            return usersALL;
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("这里出错？");
+        }
+        manager.closeDB();
+        return null;
+    }
+
+
+
+
 
     public UsersALL GetNewStack_id(String strKind) {
 
@@ -186,7 +227,6 @@ public class SqlOperator {
             }
             UsersALL usersALL = new UsersALL();
             usersALL.setData(stack_id);
-            System.out.println("是不是执行到这里");
             return usersALL;
         } catch (Exception e) {
             e.printStackTrace();
@@ -227,7 +267,6 @@ public class SqlOperator {
 
             UsersALL usersALL = new UsersALL();
             usersALL.setStockDetails(stockDetails);
-            System.out.println("是不是执行到这里");
             return usersALL;
         } catch (Exception e) {
             e.printStackTrace();
