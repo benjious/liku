@@ -11,16 +11,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class GetNewStackId extends HttpServlet {
+public class UpdatePallet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String strKind = request.getParameter("strKind");
-        request.setCharacterEncoding("UTF-8");
-        System.out.println(strKind + "-----" );
 
+        String lastUpdateDate = request.getParameter("LAST_UPDATE_DATE");
+        String lastUpdatedBy = request.getParameter("LAST_UPDATED_BY");
+        String palletId = request.getParameter("PALLET_ID");
+        request.setCharacterEncoding("UTF-8");
         //新建服务对象
         SqlOperator sqlOperator = new SqlOperator();
-        UsersALL havaCount = sqlOperator.getNewStackId(strKind);
+        UsersALL havaCount = sqlOperator.updatePallet(lastUpdateDate,lastUpdatedBy,palletId);
         System.out.println("havaCount :"+havaCount.toString());
         Gson gson = new Gson();
         String json = gson.toJson(havaCount);

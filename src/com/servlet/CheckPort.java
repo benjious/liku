@@ -21,7 +21,7 @@ public class CheckPort extends HttpServlet{
 
         //新建服务对象
         SqlOperator sqlOperator = new SqlOperator();
-        UsersALL havaCount = sqlOperator.CheckPort(p_code);
+        UsersALL havaCount = sqlOperator.checkPort(p_code);
         System.out.println("havaCount :"+havaCount.toString());
         Gson gson = new Gson();
         String json = gson.toJson(havaCount);

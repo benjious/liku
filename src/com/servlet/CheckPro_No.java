@@ -21,7 +21,7 @@ public class CheckPro_No extends HttpServlet {
 
         //新建服务对象
         SqlOperator sqlOperator = new SqlOperator();
-        UsersALL havaCount = sqlOperator.Check_Pro_No(pro_no);
+        UsersALL havaCount = sqlOperator.checkProNo(pro_no);
         System.out.println("havaCount :"+havaCount.toString());
         Gson gson = new Gson();
         String json = gson.toJson(havaCount);

@@ -5,7 +5,6 @@ import com.model.UsersALL;
 import com.sqlService.SqlOperator;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -23,7 +22,7 @@ public class CheckPallet extends HttpServlet {
 
         //新建服务对象
         SqlOperator sqlOperator = new SqlOperator();
-        UsersALL havaCount = sqlOperator.CheckPallet(pallet_id,status);
+        UsersALL havaCount = sqlOperator.checkPallet(pallet_id,status);
         System.out.println("havaCount :"+havaCount.toString());
         Gson gson = new Gson();
         String json = gson.toJson(havaCount);
