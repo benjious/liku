@@ -110,6 +110,24 @@
         <url-pattern>/UpdateStock</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>UpdatePallet</servlet-name>
+        <servlet-class>com.servlet.UpdatePallet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdatePallet</servlet-name>
+        <url-pattern>/UpdatePallet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>InsertStockDetail</servlet-name>
+        <servlet-class>com.servlet.InsertStockDetail</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InsertStockDetail</servlet-name>
+        <url-pattern>/InsertStockDetail</url-pattern>
+    </servlet-mapping>
 
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>

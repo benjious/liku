@@ -2,6 +2,7 @@ package com.db;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -23,6 +24,8 @@ public class DBManager {
     private static DBManager per = null;
     private Connection mConnection = null;
     private Statement mStatement = null;
+
+    private PreparedStatement mPreparedStatement=null;
 
     //单态模式-懒汉式
     private DBManager() {
@@ -60,6 +63,18 @@ public class DBManager {
         System.out.println("SqlManager: Connect to database successful.");
     }
 
+
+    public Connection getConnection(){
+        try {
+            mConnection = DriverManager.getConnection(MYSQL_URL, USER, PASS);
+            return mConnection;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     //连接数据库，获取句柄和对象
     public void connectDB_cursor_sroll() {
         System.out.println("Connecting ot database........");
@@ -82,6 +97,19 @@ public class DBManager {
         try {
 
             mStatement.close();
+            mConnection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("Close connection successful ");
+    }
+
+    //关闭数据库，关闭对象，释放句柄
+    public void closeDB_PRE() {
+        System.out.println("Close connection to database....");
+        try {
+
             mConnection.close();
         } catch (SQLException e) {
             e.printStackTrace();
