@@ -129,6 +129,16 @@
         <url-pattern>/InsertStockDetail</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>GetInventorys</servlet-name>
+        <servlet-class>com.servlet.GetInventorys</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetInventorys</servlet-name>
+        <url-pattern>/GetInventorys</url-pattern>
+    </servlet-mapping>
+
+
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>

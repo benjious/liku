@@ -10,14 +10,25 @@ import javax.servlet.http.HttpServletResponse;
 public class UsersALL {
     private List<User> Users;
     private List<StockDetail> mStockDetails;
+    private List<Inventory>  mInventories;
     private int number;
     private String data = new String("");
     private boolean yesNo;
 
 
+    public List<Inventory> getInventories() {
+        return mInventories;
+    }
+
+    public void setInventories(List<Inventory> inventories) {
+        mInventories = inventories;
+    }
+
     public UsersALL() {
         Users = new ArrayList<>();
         mStockDetails = new ArrayList<>();
+        mInventories = new ArrayList<>();
+
     }
 
     public List<StockDetail> getStockDetails() {

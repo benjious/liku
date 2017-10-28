@@ -1,6 +1,7 @@
 package com.sqlService;
 
 import com.db.DBManager;
+import com.model.Inventory;
 import com.model.StockDetail;
 import com.model.User;
 import com.model.UsersALL;
@@ -245,7 +246,6 @@ public class SqlOperator {
         // num 代表长度为4
         // d 代表参数为正数型
         result = String.format("%0" + num + "d", Integer.parseInt(code) + 1);
-
         return result;
     }
 
@@ -421,4 +421,82 @@ public class SqlOperator {
         manager.closeDB_PRE();
         return null;
     }
+
+    public UsersALL getInventorys(String pallet_id) {
+        List<Inventory> inventories = new ArrayList<>();
+        String commString = "select WMS_BA_TRK.PALLET_ID,PRODUCT_ID,PRODUCT_NAME,OLD_STOCK_QTY,WMS_INVENTORY_LIST.CHECK_LIST_NO as CHECK_LIST_NO,WMS_INVENTORY_LIST_DETAIL.OID as OID from WMS_STOCK_DETAIL ,WMS_BA_PRODUCT,WMS_INVENTORY_LIST,WMS_BA_TRK,WMS_INVENTORY_LIST_DETAIL where WMS_INVENTORY_LIST_DETAIL.STOCK_OID = WMS_BA_TRK.STOCK_OID and WMS_INVENTORY_LIST_DETAIL.CHECK_LIST_NO = WMS_INVENTORY_LIST.CHECK_LIST_NO and WMS_STOCK_DETAIL.OID = WMS_INVENTORY_LIST_DETAIL.STOCK_DETAIL_OID and WMS_BA_PRODUCT.PRODUCT_ID = WMS_STOCK_DETAIL.ITEM_ID and OPN = 8 and WMS_INVENTORY_LIST_DETAIL.STATUS = 2 and WMS_BA_TRK.PALLET_ID = '" + pallet_id + "'";
+        System.out.println("查询语句为： " + commString);
+        //初始化连接数据库对象
+        DBManager manager = DBManager.createInstance();
+        manager.connectDB_cursor_sroll();
+        //使用对象进行查询
+
+        int count = 0;
+        try {
+            ResultSet rs = manager.executeQuery(commString);
+            while (rs.next()) {
+                count = count + 1;
+            }
+            if (count != 0) {
+                for (int i = 1; i <= count; i++) {
+                    rs.absolute(i);
+                    Inventory sd = new Inventory();
+                    sd.set_pALLET_ID(rs.getString("PALLET_ID"));
+                    sd.set_pRODUCT_ID(rs.getString("PRODUCT_ID"));
+                    sd.set_pRODUCT_NAME(rs.getString("PRODUCT_NAME"));
+                    sd.set_oLD_STOCK_QTY(rs.getDouble("OLD_STOCK_QTY"));
+                    sd.set_cHECK_LIST_NO(rs.getString("CHECK_LIST_NO"));
+                    sd.set_oID(rs.getInt("OID"));
+                    inventories.add(sd);
+                }
+            }
+
+            UsersALL usersALL = new UsersALL();
+            usersALL.setInventories(inventories);
+            return usersALL;
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("这里出错？");
+        }
+        manager.closeDB();
+        return null;
+    }
+
+    public UsersALL updateInventorys(String last_updated_by, String check_list_no, String oid, String qty) {
+        DBManager manager = DBManager.createInstance();
+        try {
+            PreparedStatement preparedStatement = manager.getConnection().prepareStatement("update WMS_INVENTORY_LIST set LAST_UPDATE_DATE =?, LAST_UPDATED_BY =? where CHECK_LIST_NO =?");
+            preparedStatement.setTimestamp(1, new Timestamp(System.currentTimeMillis()));
+            preparedStatement.setInt(2, Integer.decode(last_updated_by));
+            preparedStatement.setInt(3, Integer.decode(check_list_no));
+            int updatefinish = preparedStatement.executeUpdate();
+            UsersALL usersALL = new UsersALL();
+            if (updatefinish > 0) {
+                PreparedStatement nextPreStatement = manager.getConnection().prepareStatement("UPDATE WMS_INVENTORY_LIST_DETAIL SET NEW_STOCK_QTY = @qty WHERE OID = ?");
+                preparedStatement.setInt(1, Integer.decode(oid));
+                int nextupdate = nextPreStatement.executeUpdate();
+                if (nextupdate > 0) {
+                    usersALL.setYesNo(true);
+                    System.out.println("打印结果" + updatefinish);
+                    return usersALL;
+                } else {
+                    usersALL.setYesNo(false);
+                    System.out.println("打印结果" + updatefinish);
+                    return usersALL;
+                }
+            }else {
+                usersALL.setYesNo(false);
+                System.out.println("打印结果" + updatefinish);
+                return usersALL;
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        manager.closeDB_PRE();
+        return null;
+
+    }
+
 }
