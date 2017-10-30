@@ -10,9 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d656d943-eb4f-428f-9d71-677442554805" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../liku/src/com/model/Inventory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../liku/src/com/servlet/GetInventorys.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../liku/src/com/servlet/UpdateInventorys.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../liku/src/com/model/Picking.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../liku/src/com/servlet/GetPickings.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../liku/src/com/servlet/UpdateStockDetail.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../liku/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../liku/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../liku/src/com/model/UsersALL.java" afterPath="$PROJECT_DIR$/../liku/src/com/model/UsersALL.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../liku/src/com/sqlService/SqlOperator.java" afterPath="$PROJECT_DIR$/../liku/src/com/sqlService/SqlOperator.java" />
@@ -42,21 +42,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UpdatePallet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/UpdatePallet.java">
+      <file leaf-file-name="UsersALL.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../liku/src/com/model/UsersALL.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="288">
-              <caret line="27" column="53" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="27" selection-end-column="53" />
-              <folding />
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding>
+                <element signature="e#395#396#0" expanded="true" />
+                <element signature="e#427#428#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InsertStacking.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/InsertStacking.java">
+      <file leaf-file-name="UpdateStock.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/UpdateStock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="33" column="47" lean-forward="false" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+            <state relative-caret-position="288">
+              <caret line="27" column="53" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="27" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -64,59 +67,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsersALL.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../liku/src/com/model/UsersALL.java">
+      <file leaf-file-name="UpdateInventorys.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/UpdateInventorys.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+            <state relative-caret-position="208">
+              <caret line="22" column="52" lean-forward="false" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
               <folding>
-                <element signature="e#492#493#0" expanded="true" />
-                <element signature="e#555#556#0" expanded="true" />
-                <element signature="e#597#598#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UpdateInventorys.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/UpdateInventorys.java">
+      <file leaf-file-name="GetPickings.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/GetPickings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-              <folding />
+            <state relative-caret-position="464">
+              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Inventory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../liku/src/com/model/Inventory.java">
+      <file leaf-file-name="Picking.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../liku/src/com/model/Picking.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+            <state relative-caret-position="208">
+              <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding>
-                <element signature="e#314#315#0" expanded="true" />
-                <element signature="e#366#367#0" expanded="true" />
-                <element signature="e#410#411#0" expanded="true" />
-                <element signature="e#448#449#0" expanded="true" />
-                <element signature="e#482#483#0" expanded="true" />
-                <element signature="e#536#537#0" expanded="true" />
-                <element signature="e#582#583#0" expanded="true" />
-                <element signature="e#622#623#0" expanded="true" />
-                <element signature="e#658#659#0" expanded="true" />
-                <element signature="e#716#717#0" expanded="true" />
-                <element signature="e#766#767#0" expanded="true" />
-                <element signature="e#807#808#0" expanded="true" />
-                <element signature="e#844#845#0" expanded="true" />
-                <element signature="e#904#905#0" expanded="true" />
-                <element signature="e#956#957#0" expanded="true" />
-                <element signature="e#997#998#0" expanded="true" />
-                <element signature="e#1034#1035#0" expanded="true" />
-                <element signature="e#1094#1095#0" expanded="true" />
-                <element signature="e#1146#1147#0" expanded="true" />
-                <element signature="e#1174#1175#0" expanded="true" />
-                <element signature="e#1201#1202#0" expanded="true" />
-                <element signature="e#1238#1239#0" expanded="true" />
-                <element signature="e#1270#1271#0" expanded="true" />
+                <element signature="e#218#219#0" expanded="true" />
+                <element signature="e#245#246#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -125,18 +107,32 @@
       <file leaf-file-name="SqlOperator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../liku/src/com/sqlService/SqlOperator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="464" column="27" lean-forward="false" selection-start-line="464" selection-start-column="27" selection-end-line="464" selection-end-column="27" />
+            <state relative-caret-position="8416">
+              <caret line="542" column="29" lean-forward="false" selection-start-line="542" selection-start-column="29" selection-end-line="542" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1509159417967" expanded="true" signature="9846:10023" ph="insert into WMS_STACKING... " />
-                <marker date="1509159417967" expanded="true" signature="12101:12255" ph="insert into WMS_STACKING_ITEM... " />
-                <marker date="1509159417967" expanded="true" signature="13521:13627" ph="update WMS_B... " />
-                <marker date="1509159417967" expanded="true" signature="13521:13628" ph="update WMS_B... " />
-                <marker date="1509159417967" expanded="true" signature="14431:14524" ph="update WMS_S... " />
-                <marker date="1509159417967" expanded="true" signature="15633:15838" ph="INSERT INTO WMS_STOCK_DETAIL... " />
-                <marker date="1509159417967" expanded="true" signature="19477:19569" ph="update WMS_I... " />
-                <marker date="1509159417967" expanded="true" signature="20054:20125" ph="UPDATE WMS_I... " />
+                <marker date="1509344830754" expanded="true" signature="9872:10049" ph="insert into WMS_STACKING... " />
+                <marker date="1509344830754" expanded="true" signature="12127:12281" ph="insert into WMS_STACKING_ITEM... " />
+                <marker date="1509344830754" expanded="true" signature="13547:13653" ph="update WMS_B... " />
+                <marker date="1509344830754" expanded="true" signature="13547:13654" ph="update WMS_B... " />
+                <marker date="1509344830754" expanded="true" signature="14457:14550" ph="update WMS_S... " />
+                <marker date="1509344830754" expanded="true" signature="15659:15864" ph="INSERT INTO WMS_STOCK_DETAIL... " />
+                <marker date="1509344830754" expanded="true" signature="19503:19595" ph="update WMS_I... " />
+                <marker date="1509344830754" expanded="true" signature="20080:20151" ph="UPDATE WMS_I... " />
+                <marker date="1509344830754" expanded="true" signature="22987:22998" ph="update WMS_I... " />
+                <marker date="1509344830754" expanded="true" signature="22987:23082" ph="update WMS_S... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InsertStockDetail.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/InsertStockDetail.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="33" column="50" lean-forward="false" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -145,8 +141,8 @@
       <file leaf-file-name="GetInventorys.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/GetInventorys.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+            <state relative-caret-position="272">
+              <caret line="27" column="53" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="27" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -154,32 +150,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GetNewStackId.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/GetNewStackId.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="26" column="53" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="26" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../liku/src/com/db/DBManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../liku/web/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="110" column="22" lean-forward="true" selection-start-line="110" selection-start-column="22" selection-end-line="110" selection-end-column="22" />
+            <state relative-caret-position="2384">
+              <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpdateStockDetail.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/UpdateStockDetail.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="18" column="49" lean-forward="true" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -251,11 +239,14 @@
         <option value="$PROJECT_DIR$/../liku/src/com/servlet/InsertStockDetail.java" />
         <option value="$PROJECT_DIR$/../liku/src/com/servlet/UpdateStock.java" />
         <option value="$PROJECT_DIR$/../liku/src/com/model/Inventory.java" />
-        <option value="$PROJECT_DIR$/../liku/src/com/model/UsersALL.java" />
         <option value="$PROJECT_DIR$/../liku/src/com/servlet/GetInventorys.java" />
-        <option value="$PROJECT_DIR$/../liku/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/../liku/src/com/servlet/UpdateInventorys.java" />
+        <option value="$PROJECT_DIR$/../liku/src/com/model/Picking.java" />
+        <option value="$PROJECT_DIR$/../liku/src/com/model/UsersALL.java" />
+        <option value="$PROJECT_DIR$/../liku/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/../liku/src/com/servlet/UpdateStockDetail.java" />
         <option value="$PROJECT_DIR$/../liku/src/com/sqlService/SqlOperator.java" />
+        <option value="$PROJECT_DIR$/../liku/src/com/servlet/GetPickings.java" />
       </list>
     </option>
   </component>
@@ -296,9 +287,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -386,6 +374,9 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -624,7 +615,9 @@
       <workItem from="1508717296900" duration="18617000" />
       <workItem from="1508803446964" duration="14015000" />
       <workItem from="1508823157376" duration="5764000" />
-      <workItem from="1509148513197" duration="6105000" />
+      <workItem from="1509148513197" duration="9923000" />
+      <workItem from="1509324175880" duration="5133000" />
+      <workItem from="1509367626684" duration="2569000" />
     </task>
     <task id="LOCAL-00001" summary="没有使用okhttp  和 JSON 之前">
       <created>1507621943234</created>
@@ -829,11 +822,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508829668399</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="完成盘点确认界面的请求">
+      <created>1509161842448</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1509161842448</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199476000" />
+    <option name="totallyTimeSpent" value="210996000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -859,11 +859,11 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32820514" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6854701" sideWeight="0.1633888" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6854701" sideWeight="0.8366112" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24444444" sideWeight="0.8366112" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7794872" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20196672" sideWeight="0.47341338" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20801815" sideWeight="0.47341338" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2723824" sideWeight="0.52568495" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08850227" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.4940171" order="1" side_tool="false" content_ui="tabs" />
@@ -940,7 +940,8 @@
     <MESSAGE value="productAdd添加的请求" />
     <MESSAGE value="updatestock 请求过程有问题,待完善" />
     <MESSAGE value="完成了新增物料界面的服务器请求," />
-    <option name="LAST_COMMIT_MESSAGE" value="完成了新增物料界面的服务器请求," />
+    <MESSAGE value="完成盘点确认界面的请求" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成盘点确认界面的请求" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -949,38 +950,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../liku/src/com/sqlService/SqlOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="34" column="5" lean-forward="false" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1509159417967" expanded="true" signature="9846:10023" ph="insert into WMS_STACKING... " />
-            <marker date="1509159417967" expanded="true" signature="12101:12255" ph="insert into WMS_STACKING_ITEM... " />
-            <marker date="1509159417967" expanded="true" signature="13521:13627" ph="update WMS_B... " />
-            <marker date="1509159417967" expanded="true" signature="13521:13628" ph="update WMS_B... " />
-            <marker date="1509159417967" expanded="true" signature="14431:14524" ph="update WMS_S... " />
-            <marker date="1509159417967" expanded="true" signature="15633:15838" ph="INSERT INTO WMS_STOCK_DETAIL... " />
-            <marker date="1509159417967" expanded="true" signature="19477:19569" ph="update WMS_I... " />
-            <marker date="1509159417967" expanded="true" signature="20054:20125" ph="UPDATE WMS_I... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/ReLet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../liku/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../liku/src/com/db/DBManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
@@ -1010,14 +979,16 @@
           <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1509159417967" expanded="true" signature="9846:10023" ph="insert into WMS_STACKING... " />
-            <marker date="1509159417967" expanded="true" signature="12101:12255" ph="insert into WMS_STACKING_ITEM... " />
-            <marker date="1509159417967" expanded="true" signature="13521:13627" ph="update WMS_B... " />
-            <marker date="1509159417967" expanded="true" signature="13521:13628" ph="update WMS_B... " />
-            <marker date="1509159417967" expanded="true" signature="14431:14524" ph="update WMS_S... " />
-            <marker date="1509159417967" expanded="true" signature="15633:15838" ph="INSERT INTO WMS_STOCK_DETAIL... " />
-            <marker date="1509159417967" expanded="true" signature="19477:19569" ph="update WMS_I... " />
-            <marker date="1509159417967" expanded="true" signature="20054:20125" ph="UPDATE WMS_I... " />
+            <marker date="1509344830754" expanded="true" signature="9872:10049" ph="insert into WMS_STACKING... " />
+            <marker date="1509344830754" expanded="true" signature="12127:12281" ph="insert into WMS_STACKING_ITEM... " />
+            <marker date="1509344830754" expanded="true" signature="13547:13653" ph="update WMS_B... " />
+            <marker date="1509344830754" expanded="true" signature="13547:13654" ph="update WMS_B... " />
+            <marker date="1509344830754" expanded="true" signature="14457:14550" ph="update WMS_S... " />
+            <marker date="1509344830754" expanded="true" signature="15659:15864" ph="INSERT INTO WMS_STOCK_DETAIL... " />
+            <marker date="1509344830754" expanded="true" signature="19503:19595" ph="update WMS_I... " />
+            <marker date="1509344830754" expanded="true" signature="20080:20151" ph="UPDATE WMS_I... " />
+            <marker date="1509344830754" expanded="true" signature="22987:22998" ph="update WMS_I... " />
+            <marker date="1509344830754" expanded="true" signature="22987:23082" ph="update WMS_S... " />
           </folding>
         </state>
       </provider>
@@ -1182,7 +1153,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="23" column="46" lean-forward="false" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1190,7 +1160,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1198,9 +1167,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1223,7 +1189,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="26" column="51" lean-forward="false" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1231,7 +1196,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="32" column="1" lean-forward="false" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1239,7 +1203,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="43">
           <caret line="365" column="0" lean-forward="false" selection-start-line="365" selection-start-column="0" selection-end-line="365" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1247,16 +1210,114 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/GetNewStackId.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="26" column="53" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="26" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/InsertStacking.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="33" column="47" lean-forward="false" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../liku/src/com/model/Inventory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+          <folding>
+            <element signature="e#314#315#0" expanded="false" />
+            <element signature="e#366#367#0" expanded="false" />
+            <element signature="e#410#411#0" expanded="false" />
+            <element signature="e#448#449#0" expanded="false" />
+            <element signature="e#482#483#0" expanded="false" />
+            <element signature="e#536#537#0" expanded="false" />
+            <element signature="e#582#583#0" expanded="false" />
+            <element signature="e#622#623#0" expanded="false" />
+            <element signature="e#658#659#0" expanded="false" />
+            <element signature="e#716#717#0" expanded="false" />
+            <element signature="e#766#767#0" expanded="false" />
+            <element signature="e#807#808#0" expanded="false" />
+            <element signature="e#844#845#0" expanded="false" />
+            <element signature="e#904#905#0" expanded="false" />
+            <element signature="e#956#957#0" expanded="false" />
+            <element signature="e#997#998#0" expanded="false" />
+            <element signature="e#1034#1035#0" expanded="false" />
+            <element signature="e#1094#1095#0" expanded="false" />
+            <element signature="e#1146#1147#0" expanded="false" />
+            <element signature="e#1174#1175#0" expanded="false" />
+            <element signature="e#1201#1202#0" expanded="false" />
+            <element signature="e#1238#1239#0" expanded="false" />
+            <element signature="e#1270#1271#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/UpdatePallet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="27" column="53" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="27" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../liku/src/com/db/DBManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/GetInventorys.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="27" column="53" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="27" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../liku/src/com/model/Picking.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="e#218#219#0" expanded="true" />
+            <element signature="e#245#246#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../liku/src/com/model/UsersALL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="e#395#396#0" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../liku/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2384">
+          <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/UpdateStock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="18" column="60" lean-forward="false" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+        <state relative-caret-position="288">
+          <caret line="27" column="53" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="27" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1273,125 +1334,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/GetNewStackId.java">
+    <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/UpdateInventorys.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="26" column="53" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="26" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/InsertStacking.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="33" column="47" lean-forward="false" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+        <state relative-caret-position="208">
+          <caret line="22" column="52" lean-forward="false" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../liku/src/com/model/Inventory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-          <folding>
-            <element signature="e#314#315#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
-            <element signature="e#410#411#0" expanded="true" />
-            <element signature="e#448#449#0" expanded="true" />
-            <element signature="e#482#483#0" expanded="true" />
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#582#583#0" expanded="true" />
-            <element signature="e#622#623#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#716#717#0" expanded="true" />
-            <element signature="e#766#767#0" expanded="true" />
-            <element signature="e#807#808#0" expanded="true" />
-            <element signature="e#844#845#0" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#956#957#0" expanded="true" />
-            <element signature="e#997#998#0" expanded="true" />
-            <element signature="e#1034#1035#0" expanded="true" />
-            <element signature="e#1094#1095#0" expanded="true" />
-            <element signature="e#1146#1147#0" expanded="true" />
-            <element signature="e#1174#1175#0" expanded="true" />
-            <element signature="e#1201#1202#0" expanded="true" />
-            <element signature="e#1238#1239#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/GetInventorys.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../liku/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="110" column="22" lean-forward="true" selection-start-line="110" selection-start-column="22" selection-end-line="110" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../liku/src/com/model/UsersALL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-          <folding>
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#555#556#0" expanded="true" />
-            <element signature="e#597#598#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/UpdatePallet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="27" column="53" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="27" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../liku/src/com/db/DBManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../liku/src/com/sqlService/SqlOperator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="464" column="27" lean-forward="false" selection-start-line="464" selection-start-column="27" selection-end-line="464" selection-end-column="27" />
+        <state relative-caret-position="8416">
+          <caret line="542" column="29" lean-forward="false" selection-start-line="542" selection-start-column="29" selection-end-line="542" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1509159417967" expanded="true" signature="9846:10023" ph="insert into WMS_STACKING... " />
-            <marker date="1509159417967" expanded="true" signature="12101:12255" ph="insert into WMS_STACKING_ITEM... " />
-            <marker date="1509159417967" expanded="true" signature="13521:13627" ph="update WMS_B... " />
-            <marker date="1509159417967" expanded="true" signature="13521:13628" ph="update WMS_B... " />
-            <marker date="1509159417967" expanded="true" signature="14431:14524" ph="update WMS_S... " />
-            <marker date="1509159417967" expanded="true" signature="15633:15838" ph="INSERT INTO WMS_STOCK_DETAIL... " />
-            <marker date="1509159417967" expanded="true" signature="19477:19569" ph="update WMS_I... " />
-            <marker date="1509159417967" expanded="true" signature="20054:20125" ph="UPDATE WMS_I... " />
+            <marker date="1509344830754" expanded="true" signature="9872:10049" ph="insert into WMS_STACKING... " />
+            <marker date="1509344830754" expanded="true" signature="12127:12281" ph="insert into WMS_STACKING_ITEM... " />
+            <marker date="1509344830754" expanded="true" signature="13547:13653" ph="update WMS_B... " />
+            <marker date="1509344830754" expanded="true" signature="13547:13654" ph="update WMS_B... " />
+            <marker date="1509344830754" expanded="true" signature="14457:14550" ph="update WMS_S... " />
+            <marker date="1509344830754" expanded="true" signature="15659:15864" ph="INSERT INTO WMS_STOCK_DETAIL... " />
+            <marker date="1509344830754" expanded="true" signature="19503:19595" ph="update WMS_I... " />
+            <marker date="1509344830754" expanded="true" signature="20080:20151" ph="UPDATE WMS_I... " />
+            <marker date="1509344830754" expanded="true" signature="22987:22998" ph="update WMS_I... " />
+            <marker date="1509344830754" expanded="true" signature="22987:23082" ph="update WMS_S... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/UpdateInventorys.java">
+    <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/UpdateStockDetail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-          <folding />
+        <state relative-caret-position="249">
+          <caret line="18" column="49" lean-forward="true" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../liku/src/com/servlet/GetPickings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

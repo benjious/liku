@@ -139,6 +139,27 @@
     </servlet-mapping>
 
 
+    <servlet>
+        <servlet-name>GetPickings</servlet-name>
+        <servlet-class>com.servlet.GetPickings</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetPickings</servlet-name>
+        <url-pattern>/GetPickings</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>UpdateStockDetail</servlet-name>
+        <servlet-class>com.servlet.UpdateStockDetail</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateStockDetail</servlet-name>
+        <url-pattern>/UpdateStockDetail</url-pattern>
+    </servlet-mapping>
+
+
+
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>

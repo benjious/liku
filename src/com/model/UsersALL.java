@@ -11,6 +11,16 @@ public class UsersALL {
     private List<User> Users;
     private List<StockDetail> mStockDetails;
     private List<Inventory>  mInventories;
+    private List<Picking> mPickings;
+
+    public List<Picking> getPickings() {
+        return mPickings;
+    }
+
+    public void setPickings(List<Picking> pickings) {
+        mPickings = pickings;
+    }
+
     private int number;
     private String data = new String("");
     private boolean yesNo;

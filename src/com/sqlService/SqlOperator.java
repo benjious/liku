@@ -2,6 +2,7 @@ package com.sqlService;
 
 import com.db.DBManager;
 import com.model.Inventory;
+import com.model.Picking;
 import com.model.StockDetail;
 import com.model.User;
 import com.model.UsersALL;
@@ -499,4 +500,69 @@ public class SqlOperator {
 
     }
 
+    public UsersALL getPickings(String p_code, String pallet_id) {
+        List<Picking> pickingList = new ArrayList<>();
+        String commString ="SELECT OID,WMS_STOCK_DETAIL.STOCK_OID,PRODUCT_ID,PRODUCT_NAME,OUT_QTY,UOM FROM WMS_BA_TRK,WMS_STOCK_DETAIL,WMS_BA_PRODUCT WHERE WMS_BA_TRK.STOCK_OID = WMS_STOCK_DETAIL.STOCK_OID AND WMS_STOCK_DETAIL.ITEM_ID = WMS_BA_PRODUCT.PRODUCT_ID and P_CODE = '"+ p_code + "' and PALLET_ID = '" + pallet_id + "' and OPN = 6";
+        System.out.println("查询语句为： " + commString);
+        //初始化连接数据库对象
+        DBManager manager = DBManager.createInstance();
+        manager.connectDB_cursor_sroll();
+        //使用对象进行查询
+
+        int count = 0;
+        try {
+            ResultSet rs = manager.executeQuery(commString);
+            while (rs.next()) {
+                count = count + 1;
+            }
+            if (count != 0) {
+                for (int i = 1; i <= count; i++) {
+                    rs.absolute(i);
+                    Picking picking = new Picking();
+                    picking.set_oID(rs.getInt("OID"));
+                    picking.set_sTOCK_OID(rs.getInt("STOCK_OID"));
+                    picking.set_pRODUCT_ID(rs.getString("PRODUCT_ID"));
+                    picking.set_pRODUCT_NAME(rs.getString("PRODUCT_NAME"));
+                    picking.set_oUT_QTY(rs.getDouble("OUT_QTY"));
+                    picking.set_uOM(rs.getString("UOM"));
+                    pickingList.add(picking);
+                }
+            }
+            UsersALL usersALL = new UsersALL();
+            usersALL.setPickings(pickingList);
+            return usersALL;
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("这里出错？");
+        }
+        manager.closeDB();
+        return null;
+
+    }
+
+    public UsersALL updateStockDetail(String lastUpdateBy, String oid, String qty) {
+        DBManager manager = DBManager.createInstance();
+        try {
+            PreparedStatement preparedStatement = manager.getConnection().prepareStatement("update WMS_STOCK_DETAIL set OUT_QTY = ?,LAST_UPDATE_DATE = ?, LAST_UPDATED_BY = ? where OID = ?");
+            preparedStatement.setInt(1, Integer.decode(qty));
+            preparedStatement.setTimestamp(2, new Timestamp(System.currentTimeMillis()));
+            preparedStatement.setString(3, lastUpdateBy);
+            preparedStatement.setString(4, oid);
+
+            int updatefinish = preparedStatement.executeUpdate();
+            UsersALL usersALL = new UsersALL();
+            if (updatefinish > 0) {
+                usersALL.setYesNo(true);
+
+            }else {
+                usersALL.setYesNo(false);
+            }
+            System.out.println("打印结果" + updatefinish);
+            return usersALL;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        manager.closeDB_PRE();
+        return null;
+    }
 }
