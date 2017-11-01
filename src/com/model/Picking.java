@@ -1,6 +1,9 @@
 package com.model;
 
-public class Picking {
+import java.io.Serializable;
+
+public class Picking  implements Serializable{
+    private static final long serialVersionUID =4849653612323265145L;
     private int _oID;
     private int _sTOCK_OID;
 

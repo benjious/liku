@@ -8,10 +8,13 @@ import java.util.List;
 import javax.servlet.http.HttpServletResponse;
 
 public class UsersALL {
-    private List<User> Users;
+    private List<User> mUsers;
     private List<StockDetail> mStockDetails;
     private List<Inventory>  mInventories;
     private List<Picking> mPickings;
+    private int number;
+    private String data ="";
+    private boolean yesNo;
 
     public List<Picking> getPickings() {
         return mPickings;
@@ -20,12 +23,6 @@ public class UsersALL {
     public void setPickings(List<Picking> pickings) {
         mPickings = pickings;
     }
-
-    private int number;
-    private String data = new String("");
-    private boolean yesNo;
-
-
     public List<Inventory> getInventories() {
         return mInventories;
     }
@@ -35,10 +32,10 @@ public class UsersALL {
     }
 
     public UsersALL() {
-        Users = new ArrayList<>();
+        mUsers = new ArrayList<>();
         mStockDetails = new ArrayList<>();
         mInventories = new ArrayList<>();
-
+        mPickings = new ArrayList<>();
     }
 
     public List<StockDetail> getStockDetails() {
@@ -59,11 +56,11 @@ public class UsersALL {
 
 
     public List<User> getUsers() {
-        return Users;
+        return mUsers;
     }
 
     public void setUsers(List<User> users) {
-        Users = users;
+        mUsers = users;
     }
 
     public int getNumber() {
@@ -85,7 +82,14 @@ public class UsersALL {
     @Override
     public String toString() {
         return "UsersALL{" +
-                "Users=" + Users + '}';
+                "mUsers=" + mUsers +
+                ", mStockDetails=" + mStockDetails +
+                ", mInventories=" + mInventories +
+                ", mPickings=" + mPickings +
+                ", number=" + number +
+                ", data='" + data + '\'' +
+                ", yesNo=" + yesNo +
+                '}';
     }
 
     public static void makeJson(HttpServletResponse response, UsersALL havaCount, String json) throws IOException {

@@ -50,23 +50,65 @@ public class SqlOperator {
 
     public UsersALL login_name(String username, String password) {
 
+//        //初始化连接数据库对象
+//        DBManager manager = DBManager.createInstance();
+//        manager.connectDB_cursor_sroll();
+//        //使用对象进行查询
+//
+//        int count = 0;
+//        try {
+//            ResultSet rs = manager.executeQuery(commandString);
+//            while (rs.next()) {
+//                count = count + 1;
+//            }
+//            for (int i = 1; i <= count; i++) {
+//                rs.absolute(i);
+//                str1 = rs.getString("STACK_ID").substring(3);
+//            }
+//            if (stack_id.compareTo(str1) <= 0) {
+//                String str2 = str1.substring(6);
+//                stack_id = strKind + str + autoGenericCode(str2, 3);
+//                System.out.println("看一下是什么 "+stack_id);
+//            } else {
+//                stack_id = strKind + stack_id;
+//            }
+//            UsersALL usersALL = new UsersALL();
+//            usersALL.setData(stack_id);
+//            return usersALL;
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            System.out.println("这里出错？");
+//        }
+//        manager.closeDB();
+//        return null;
+
+
         UsersALL usersALL;
         ArrayList<User> users = new ArrayList<>();
-
-        //获取sql查询语句
-        String logSql = "select * from student where username ='" + username + "' and password ='" + password + "'";
-        System.out.println("  xyz 登录的语句为：" + logSql);
         //初始化连接数据库对象
         DBManager manager = DBManager.createInstance();
-        manager.connectDB();
+        manager.connectDB_cursor_sroll();
+        //使用对象进行查询
+
+        int count = 0;
+        //获取sql查询语句
+        String logSql = "select * from sys_User where U_LoginName='" + username + "' and U_Password='"+password+"'";
+        System.out.println("  xyz 登录的语句为：" + logSql);
+        //初始化连接数据库对象
+
         //使用对象进行查询
         try {
-
             ResultSet rs = manager.executeQuery(logSql);
             while (rs.next()) {
-                String name = rs.getString("username");
-                System.out.println("数据库的结果是：" + name + " ");
-                users.add(new User(name, null));
+                count = count + 1;
+            }
+            for (int i = 1; i <= count; i++) {
+                rs.absolute(i);
+                User user = new User();
+                user.set_userID(Integer.parseInt(rs.getString("UserID")));
+                user.set_roleName(rs.getString("U_LoginName"));
+                user.set_userCnName(rs.getString("U_CName"));
+                users.add(user);
             }
             usersALL = new UsersALL();
             usersALL.setUsers(users);
@@ -356,7 +398,7 @@ public class SqlOperator {
 
         DBManager manager = DBManager.createInstance();
         try {
-            PreparedStatement preparedStatement = manager.getConnection().prepareStatement("UPDATE WMS_BA_PALLET_MAPPING SET LOCK_FLAG = 1,LAST_UPDATE_DATE = ?, LAST_UPDATED_BY =? WHERE PALLET_ID = ?");
+            PreparedStatement preparedStatement = manager.getConnection().prepareStatement("UPDATE WMS_BA_PALLET_MAPPING SET LOCK_FLAG = 1,LAST_UPDATE_DATE =?, LAST_UPDATED_BY =? WHERE PALLET_ID =?");
             preparedStatement.setTimestamp(1, ConvertTime.convertToTimestamp(lastUpdateDate));
             preparedStatement.setInt(2, Integer.decode(lastUpdatedBy));
             preparedStatement.setString(3, palletId);
@@ -383,7 +425,6 @@ public class SqlOperator {
             int updatefinish = preparedStatement.executeUpdate();
             UsersALL usersALL = new UsersALL();
             usersALL.setNumber(updatefinish);
-            System.out.println("打印结果" + updatefinish);
             return usersALL;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -544,11 +585,10 @@ public class SqlOperator {
         DBManager manager = DBManager.createInstance();
         try {
             PreparedStatement preparedStatement = manager.getConnection().prepareStatement("update WMS_STOCK_DETAIL set OUT_QTY = ?,LAST_UPDATE_DATE = ?, LAST_UPDATED_BY = ? where OID = ?");
-            preparedStatement.setInt(1, Integer.decode(qty));
+            preparedStatement.setDouble(1,Double.valueOf(qty));
             preparedStatement.setTimestamp(2, new Timestamp(System.currentTimeMillis()));
             preparedStatement.setString(3, lastUpdateBy);
             preparedStatement.setString(4, oid);
-
             int updatefinish = preparedStatement.executeUpdate();
             UsersALL usersALL = new UsersALL();
             if (updatefinish > 0) {

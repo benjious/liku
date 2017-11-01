@@ -8,29 +8,15 @@ import java.sql.Date;
  */
 
 public class StockDetail {
-    private int _oID;
+    public String get_product_name() {
+        return _product_name;
+    }
 
+    public void set_product_name(String _product_name) {
+        this._product_name = _product_name;
+    }
 
-    private int _sTOCK_OID;
-
-
-    private String _iTEM_ID;
-
-
-    private String _bARCODE_NO;
-
-
-    private Date _pROD_DATE;
-
-
-    private Date _eXPIRE_DATE;
-
-
-    private String _bATCH_NO;
-
-
-    private String _lIST_NO;
-
+    private String _product_name;
 
     public int get_oID() {
         return _oID;
@@ -96,13 +82,7 @@ public class StockDetail {
         this._lIST_NO = _lIST_NO;
     }
 
-    public double get_qTY() {
-        return _qTY;
-    }
 
-    public void set_qTY(double _qTY) {
-        this._qTY = _qTY;
-    }
 
     public String get_oUT_LIST_NO() {
         return _oUT_LIST_NO;
@@ -168,7 +148,38 @@ public class StockDetail {
         this._gRADE = _gRADE;
     }
 
-    private double _qTY;
+    private int _oID;
+
+
+    private int _sTOCK_OID;
+
+
+    private String _iTEM_ID;
+
+
+    private String _bARCODE_NO;
+
+
+    private Date _pROD_DATE;
+
+
+    private Date _eXPIRE_DATE;
+
+
+    private String _bATCH_NO;
+
+    public int get_qTY() {
+        return _qTY;
+    }
+
+    public void set_qTY(int _qTY) {
+        this._qTY = _qTY;
+    }
+
+    private String _lIST_NO;
+
+
+    private int _qTY;
 
 
     private String _oUT_LIST_NO;
@@ -194,5 +205,27 @@ public class StockDetail {
 
     private String _gRADE;
 
-
+    @Override
+    public String toString() {
+        return "StockDetail{" +
+                "_oID=" + _oID +
+                ", _sTOCK_OID=" + _sTOCK_OID +
+                ", _iTEM_ID='" + _iTEM_ID + '\'' +
+                ", _bARCODE_NO='" + _bARCODE_NO + '\'' +
+                ", _pROD_DATE=" + _pROD_DATE +
+                ", _eXPIRE_DATE=" + _eXPIRE_DATE +
+                ", _bATCH_NO='" + _bATCH_NO + '\'' +
+                ", _lIST_NO='" + _lIST_NO + '\'' +
+                ", _qTY=" + _qTY +
+                ", _oUT_LIST_NO='" + _oUT_LIST_NO + '\'' +
+                ", _oUT_QTY=" + _oUT_QTY +
+                ", _sTOCK_QTY=" + _sTOCK_QTY +
+                ", _cREATION_DATE=" + _cREATION_DATE +
+                ", _cREATED_BY=" + _cREATED_BY +
+                ", _lAST_UPDATE_DATE=" + _lAST_UPDATE_DATE +
+                ", _lAST_UPDATED_BY=" + _lAST_UPDATED_BY +
+                ", _gRADE='" + _gRADE + '\'' +
+                '}';
+    }
 }
+
