@@ -158,7 +158,14 @@
         <url-pattern>/UpdateStockDetail</url-pattern>
     </servlet-mapping>
 
-
+    <servlet>
+        <servlet-name>GetBinstas</servlet-name>
+        <servlet-class>com.servlet.GetBinstas</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetBinstas</servlet-name>
+        <url-pattern>/GetBinstas</url-pattern>
+    </servlet-mapping>
 
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>

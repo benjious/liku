@@ -1,6 +1,7 @@
 package com.sqlService;
 
 import com.db.DBManager;
+import com.model.Binsta;
 import com.model.Inventory;
 import com.model.Picking;
 import com.model.StockDetail;
@@ -23,6 +24,7 @@ import java.util.List;
  */
 public class SqlOperator {
     public static final String NOTHING = "NOTHING";
+    private UsersALL mBinsta;
 
     public Boolean login(String username, String password) {
 
@@ -604,5 +606,58 @@ public class SqlOperator {
         }
         manager.closeDB_PRE();
         return null;
+    }
+
+    public UsersALL getBinsta() {
+//        string commString = "select BIN_NO from WMS_BA_BINSTA where BIN_STA = '_' and IO_DISA = 'N' and BIN_NO not in(select WMS_BA_TRK.BIN_NO from  WMS_BA_TRK) ";
+//
+//        DataTable dt = SqlHelper.ExcuteTable(commString);
+//        if (dt.Rows.Count == 0 || dt == null)
+//            return null;
+//        else
+//        {
+//            List<Binsta> Binstas = new List<Binsta>();
+//            foreach (DataRow dr in dt.Rows)
+//            {
+//                Binsta binsta = new Binsta();
+//                binsta.BIN_NO = dr["BIN_NO"].ToString();
+//                Binstas.Add(binsta);
+//            }
+//            return Binstas;
+//        }
+
+        List<Binsta> binstas = new ArrayList<>();
+        String commString = "select BIN_NO from WMS_BA_BINSTA where BIN_STA = '_' and IO_DISA = 'N' and BIN_NO not in(select WMS_BA_TRK.BIN_NO from  WMS_BA_TRK) ";
+        System.out.println("查询语句为： " + commString);
+        //初始化连接数据库对象
+        DBManager manager = DBManager.createInstance();
+        manager.connectDB_cursor_sroll();
+        //使用对象进行查询
+
+        int count = 0;
+        try {
+            ResultSet rs = manager.executeQuery(commString);
+            while (rs.next()) {
+                count = count + 1;
+            }
+            if (count != 0) {
+                for (int i = 1; i <= count; i++) {
+                    rs.absolute(i);
+                    Binsta binsta = new Binsta();
+                    binsta.set_bIN_NO(rs.getString("BIN_NO"));
+                    binstas.add(binsta);
+                }
+            }
+
+            UsersALL usersALL = new UsersALL();
+            usersALL.setBinstas(binstas);
+            return usersALL;
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("这里出错？");
+        }
+        manager.closeDB();
+        return null;
+
     }
 }
