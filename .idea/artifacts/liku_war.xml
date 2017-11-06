@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="war" name="liku:war">
-    <output-path>$PROJECT_DIR$/../liku/out/artifacts/liku_war</output-path>
-    <root id="archive" name="liku_war.war">
+    <output-path>$PROJECT_DIR$/../liku/out/artifacts/liku</output-path>
+    <root id="archive" name="liku.war">
       <element id="artifact" artifact-name="liku:war exploded" />
     </root>
   </artifact>
