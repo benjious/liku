@@ -167,6 +167,18 @@
         <url-pattern>/GetBinstas</url-pattern>
     </servlet-mapping>
 
+
+    <servlet>
+        <servlet-name>InsertSort</servlet-name>
+        <servlet-class>com.servlet.InsertSort</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InsertSort</servlet-name>
+        <url-pattern>/InsertSort</url-pattern>
+    </servlet-mapping>
+
+
+
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>

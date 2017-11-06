@@ -609,22 +609,6 @@ public class SqlOperator {
     }
 
     public UsersALL getBinsta() {
-//        string commString = "select BIN_NO from WMS_BA_BINSTA where BIN_STA = '_' and IO_DISA = 'N' and BIN_NO not in(select WMS_BA_TRK.BIN_NO from  WMS_BA_TRK) ";
-//
-//        DataTable dt = SqlHelper.ExcuteTable(commString);
-//        if (dt.Rows.Count == 0 || dt == null)
-//            return null;
-//        else
-//        {
-//            List<Binsta> Binstas = new List<Binsta>();
-//            foreach (DataRow dr in dt.Rows)
-//            {
-//                Binsta binsta = new Binsta();
-//                binsta.BIN_NO = dr["BIN_NO"].ToString();
-//                Binstas.Add(binsta);
-//            }
-//            return Binstas;
-//        }
 
         List<Binsta> binstas = new ArrayList<>();
         String commString = "select BIN_NO from WMS_BA_BINSTA where BIN_STA = '_' and IO_DISA = 'N' and BIN_NO not in(select WMS_BA_TRK.BIN_NO from  WMS_BA_TRK) ";
@@ -657,6 +641,28 @@ public class SqlOperator {
             System.out.println("这里出错？");
         }
         manager.closeDB();
+        return null;
+
+    }
+
+    public UsersALL insertSort(String barcode, String dev_no, String kind, String status1, String created_by, String creation_date) {
+        DBManager manager = DBManager.createInstance();
+        try {
+            PreparedStatement preparedStatement = manager.getConnection().prepareStatement("insert into WMS_SORT_PORT_INFO (Barcode,Dev_No,Kind,Status,Created_By,Creation_Date) values (?,?,?,?,?,?)");
+            preparedStatement.setString(1, barcode);
+            preparedStatement.setString(2, dev_no);
+            preparedStatement.setInt(3, Integer.decode(kind));
+            preparedStatement.setInt(4, Integer.decode(status1));
+            preparedStatement.setInt(5, Integer.decode(created_by));
+            preparedStatement.setTimestamp(6, ConvertTime.convertToTimestamp(creation_date));
+            int updatefinish = preparedStatement.executeUpdate();
+            UsersALL usersALL = new UsersALL();
+            usersALL.setNumber(updatefinish);
+            return usersALL;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        manager.closeDB_PRE();
         return null;
 
     }
